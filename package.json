@@ -4,8 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "node scripts/build.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "npx gulp build",
+    "clean": "npx gulp clean",
+    "watch": "npx gulp watch"
   },
   "repository": {
     "type": "git",
@@ -19,7 +20,8 @@
   },
   "homepage": "https://github.com/AmjedAgabani/mjml-email-templates#readme",
   "devDependencies": {
-    "mjml": "^4.13.0",
-    "recursive-readdir": "^2.2.3"
+    "gulp": "^4.0.2",
+    "gulp-mjml": "^4.0.2",
+    "mjml": "^4.13.0"
   }
 }
