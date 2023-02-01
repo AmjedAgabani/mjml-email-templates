@@ -1,0 +1,25 @@
+{
+  "name": "mjml-email-templates",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "node scripts/build.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AmjedAgabani/mjml-email-templates.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AmjedAgabani/mjml-email-templates/issues"
+  },
+  "homepage": "https://github.com/AmjedAgabani/mjml-email-templates#readme",
+  "devDependencies": {
+    "mjml": "^4.13.0",
+    "recursive-readdir": "^2.2.3"
+  }
+}
