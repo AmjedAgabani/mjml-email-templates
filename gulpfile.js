@@ -67,23 +67,50 @@ const index = {
     });
   },
   render: (cb) => {
+    const data = Array.from(index.data);
+    const groups = {};
+
+    // Group the data by the first directory in their path
+    data.forEach((file) => {
+      const splitPath = file.split(path.sep);
+      const groupName = splitPath[0];
+      const filePath = splitPath.slice(1).join(path.sep);
+
+      if (!groups[groupName]) {
+        groups[groupName] = [];
+      }
+      groups[groupName].push(filePath);
+    });
+
+    // Sort the groups and their contents
+    const sortedGroups = Object.keys(groups).sort();
+    sortedGroups.forEach((groupName) => {
+      groups[groupName].sort();
+    });
+
+    // Generate the HTML for the index page
     const html = `
-<!DOCTYPE html>
-<html>
-<head>
-</head>
-<body>
-  <h1>Email index</h1>
-  <ul>
-${Array.from(index.data)
-  .sort()
-  .map((file) => {
-    return `<li><a href="${file}">${file}</a></li>`;
-  })
-  .join('\n')}
-  </ul>
-</body>
-</html>`;
+  <!DOCTYPE html>
+  <html>
+  <head>
+  </head>
+  <body>
+    <h1>Email Index</h1>
+    <ul>
+  ${sortedGroups
+    .map((groupName) => {
+      return `<li><strong>${groupName}</strong><ul>${groups[groupName]
+        .map((filePath) => {
+          return `<li><a href="${groupName}/${filePath}">${filePath}</a></li>`;
+        })
+        .join('')}</ul></li>`;
+    })
+    .join('\n')}
+    </ul>
+  </body>
+  </html>`;
+
+    // Write the HTML to the build directory
     fs.writeFile(`${BUILD_DIR}/index.html`, html, cb);
   },
 };
