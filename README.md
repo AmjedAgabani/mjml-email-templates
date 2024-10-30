@@ -15,10 +15,13 @@ Node.js application that uses the MJML framework to develop responsive component
 
 The following `npm` scripts are available for use:
 
-| Script  | Description                                                                                                                                                                                                                                                                 |
-| ------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `build` | Builds the project. This will create a `build` directory in the project root, which may contain any number of subdirectories depending on your project structure. Open the compiled email template by navigating to the appropriate file path within the `build` directory. |
-| `clean` | Deletes the `build` directory and everything inside it.                                                                                                                                                                                                                     |
-| `watch` | Watches for changes to the project files and automatically rebuilds the project. Will also launch a browser window displaying an index of the `build` directory, making it easy to navigate through the various email templates.                                            |
+| Script      | Description                                                                                                                                                                                                                                                                              |
+| ----------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `build`     | Builds the project. This will create a `build` directory in the project root, which may contain any number of subdirectories depending on your project structure. Open the compiled email template by navigating to the appropriate file path within the `build` directory.              |
+| `build:dev` | Builds the project for local development. This will also create a `build` directory, but image URLs will use `http://localhost:3000/img`, making it easy to preview images on your local server. Navigate to the correct path within the `build` directory to access the email template. |
+| `clean`     | Deletes the `build` directory and everything inside it.                                                                                                                                                                                                                                  |
+| `watch`     | Watches for changes to the project files and automatically rebuilds the project. Will also launch a browser window displaying an index of the `build` directory, making it easy to navigate through the various email templates.                                                         |
+
+
 
 To run a script, open your terminal and enter `npm run <script>`.
