@@ -27,4 +27,4 @@ The following `npm` scripts are available for use:
 
 
 
-To run a script, open your terminal and enter `npm run <script>`.
+To run a script, open a terminal in the project directory and enter `npm run <script>`.
