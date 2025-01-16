@@ -2,12 +2,13 @@
   <mj-head>
   </mj-head>
   <mj-body background-color="#ccc">
-    <!-- <mj-include path="./header.mjml" /> -->
+    <mj-include path="../../../components/header.mjml" />
     <mj-section>
       <mj-column>
         <mj-text align="center" color="#fff" font-size="32px">
           this is campaign BBBBBBB
         </mj-text>
+        <mj-image src="{{imgBaseUrl}}/coffee.jpg" alt="" />
       </mj-column>
     </mj-section>
   </mj-body>
