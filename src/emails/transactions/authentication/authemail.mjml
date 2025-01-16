@@ -8,6 +8,7 @@
         <mj-text align="center" color="#fff" font-size="32px">
           this is authentication
         </mj-text>
+        <mj-image src="{{imgBaseUrl}}/coffee.jpg" alt="" />
       </mj-column>
     </mj-section>
   </mj-body>

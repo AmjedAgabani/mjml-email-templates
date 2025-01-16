@@ -1,0 +1,5 @@
+<mj-section>
+  <mj-column background-color="white">
+    <mj-text align="center" color="red" font-size="24px">This is a HEADER!</mj-text>
+  </mj-column>
+</mj-section>
